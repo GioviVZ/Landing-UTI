@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTI INIA | Mesa de Ayuda y Servicios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <meta name="description" content="UTI INIA — Servicios TI, Mesa de Ayuda, Guías y tutoriales para soporte y seguridad." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Ambient background blobs -->
+  <div class="bg">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="grid"></span>
+  </div>
+
+  <!-- Header -->
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="UTI INIA">
+        <div class="brand__mark" aria-hidden="true">
+          <span class="mark__dot"></span>
+          <img src="assets/img/logos/INIA.jpg"
+              alt="INIA"
+              class="brand__logo-img">
+        </div>
+        <div class="brand__text">
+          <strong>UTI - INIA</strong>
+          <span>Mesa de Ayuda • Servicios TI • Seguridad</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <a href="#servicios">Servicios</a>
+        <a href="#tickets">Guía de tickets</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#faq">FAQ</a>
+
+        <a class="btn btn--primary"
+           href="https://app.inia.gob.pe/sistemas/publico"
+           target="_blank" rel="noopener">
+          Ir a Mesa de Ayuda
+        </a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" id="mobile" aria-hidden="true">
+      <a href="#servicios">Servicios</a>
+      <a href="#tickets">Guía de tickets</a>
+      <a href="#tutoriales">Tutoriales</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--primary w100"
+         href="https://app.inia.gob.pe/sistemas/publico"
+         target="_blank" rel="noopener">
+        Ir a Mesa de Ayuda
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__left">
+        <div class="pill">
+          <span class="pill__dot"></span>
+          <span>Canal oficial de soporte • Atención con trazabilidad</span>
+        </div>
+
+        <h1>
+          Mesa de Ayuda UTI:
+          <span class="grad">rápida, ordenada y segura</span>
+        </h1>
+
+        <p class="lead">
+          Registra tus incidencias y solicitudes TI con seguimiento. Encuentra guías,
+          videos y recomendaciones de seguridad para evitar riesgos y reducir tiempos.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--xl"
+             href="https://app.inia.gob.pe/sistemas/publico"
+             target="_blank" rel="noopener">
+            Crear / Ver mis tickets
+          </a>
+          <a class="btn btn--soft btn--xl" href="#tickets">Ver guía rápida</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">✅</div>
+            <div>
+              <strong>Ticket claro</strong>
+              <span>Mejor atención</span>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">📎</div>
+            <div>
+              <strong>Evidencias</strong>
+              <span>Capturas / fotos</span>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">🛡️</div>
+            <div>
+              <strong>Seguridad</strong>
+              <span>Buenas prácticas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero__right">
+        <div class="panel reveal">
+          <div class="panel__top">
+            <h3>¿Qué puedes solicitar aquí?</h3>
+            <span class="chip">UTI</span>
+          </div>
+
+          <ul class="checklist">
+            <li><span>✔</span> Accesos a sistemas / usuarios</li>
+            <li><span>✔</span> Soporte a equipo (PC, laptop, impresoras)</li>
+            <li><span>✔</span> Conectividad (Wi-Fi, LAN, salas)</li>
+            <li><span>✔</span> Antivirus / incidentes de seguridad</li>
+            <li><span>✔</span> Videoconferencia / periféricos</li>
+          </ul>
+
+          <div class="tip">
+            <strong>Tip:</strong> Indica <em>qué pasó</em>, <em>desde cuándo</em>, <em>mensaje de error</em>
+            y tu <em>área/sede</em>.
+          </div>
+
+          <a class="btn btn--primary w100"
+             href="https://app.inia.gob.pe/sistemas/publico"
+             target="_blank" rel="noopener">
+            Ir a Mesa de Ayuda
+          </a>
+
+          <div class="micro">
+            <span class="dot ok"></span>
+            <span>Recomendado: usar el canal oficial para atención y control.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="container hero__strip">
+      <div class="strip">
+        <div class="strip__item">
+          <span class="badge">📌</span>
+          <span><strong>Objetivo:</strong> reducir tiempos y ordenar solicitudes TI.</span>
+        </div>
+        <div class="strip__item">
+          <span class="badge">🧠</span>
+          <span><strong>Buenas prácticas:</strong> protege tu cuenta y tu información.</span>
+        </div>
+        <div class="strip__item">
+          <span class="badge">⚡</span>
+          <span><strong>Prioridad:</strong> incidencias críticas se atienden primero.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section__head">
+        <h2>Servicios UTI</h2>
+        <p>Selecciona la categoría correcta para agilizar tu atención.</p>
+      </div>
+
+      <div class="cards cards--4">
+        <article class="card">
+          <div class="card__icon">🧰</div>
+          <h3>Soporte Técnico</h3>
+          <p>Incidencias en equipos, impresoras, software institucional y asistencia remota.</p>
+          <ul>
+            <li>PC / laptop</li>
+            <li>Periféricos</li>
+            <li>Instalaciones autorizadas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__icon">🌐</div>
+          <h3>Redes y Conectividad</h3>
+          <p>Wi-Fi, LAN, cableado, acceso a red y soporte de salas de reunión.</p>
+          <ul>
+            <li>Wi-Fi / LAN</li>
+            <li>Puntos de red</li>
+            <li>Videoconferencia</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__icon">🛡️</div>
+          <h3>Seguridad Informática</h3>
+          <p>Antivirus, incidentes, correos sospechosos y recomendaciones.</p>
+          <ul>
+            <li>Alertas de seguridad</li>
+            <li>Antivirus corporativo</li>
+            <li>Buenas prácticas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__icon">💻</div>
+          <h3>Sistemas</h3>
+          <p>Accesos, errores en aplicaciones institucionales y soporte funcional.</p>
+          <ul>
+            <li>Usuarios / roles</li>
+            <li>Errores en sistema</li>
+            <li>Soporte a módulos</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout">
+        <div>
+          <h3>Canal único recomendado</h3>
+          <p>Para asegurar seguimiento, evidencias y tiempos de atención, registra tu solicitud en Mesa de Ayuda.</p>
+        </div>
+        <a class="btn btn--primary"
+           href="https://app.inia.gob.pe/sistemas/publico"
+           target="_blank" rel="noopener">
+          Abrir Mesa de Ayuda
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIA TICKETS -->
+  <section class="section section--alt" id="tickets">
+    <div class="container">
+      <div class="section__head">
+        <h2>Guía rápida para crear un ticket</h2>
+        <p>Un ticket bien hecho = solución más rápida.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__n">1</div>
+          <h3>Ingresa al portal</h3>
+          <p>Accede al sistema público de Mesa de Ayuda UTI.</p>
+          <a class="link"
+             href="https://app.inia.gob.pe/sistemas/publico"
+             target="_blank" rel="noopener">
+            Ir al portal →
+          </a>
+        </div>
+
+        <div class="step">
+          <div class="step__n">2</div>
+          <h3>Describe con precisión</h3>
+          <p>Qué ocurrió, desde cuándo, mensaje exacto y tu área/sede.</p>
+          <div class="hint">Ej: “No ingreso a SIGA — error 500 desde hoy 9:10am”</div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">3</div>
+          <h3>Adjunta evidencias</h3>
+          <p>Capturas, fotos, archivos o logs relevantes (si aplica).</p>
+          <div class="hint">Captura + nombre de equipo + usuario</div>
+        </div>
+
+        <div class="step">
+          <div class="step__n">4</div>
+          <h3>Prioridad correcta</h3>
+          <p>Selecciona impacto real. Casos críticos se atienden primero.</p>
+          <div class="hint">Crítico: sistema caído / incidente de seguridad</div>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="box good">
+          <h3>✅ Sí corresponde ticket</h3>
+          <ul>
+            <li>Equipo no enciende / falla grave</li>
+            <li>Acceso bloqueado a sistemas</li>
+            <li>Problemas de conectividad</li>
+            <li>Antivirus / alertas / sospechas de phishing</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h3>⚠️ Evita enviar por WhatsApp</h3>
+          <ul>
+            <li>Sin ticket no hay trazabilidad</li>
+            <li>Se pierden evidencias y tiempos</li>
+            <li>No se puede priorizar bien</li>
+            <li>El portal asegura seguimiento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUTORIALES -->
+  <section class="section" id="tutoriales">
+    <div class="container">
+      <div class="section__head">
+        <h2>Videos y tutoriales</h2>
+        <p> AnyDesk, seguridad, phishing y mas </p>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="videoCard">
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/VNhxNfNnn8I"
+              title="Instalar AnyDesk"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <h3>Instalar AnyDesk</h3>
+          <p>Instalación, permisos y recomendaciones para soporte remoto.</p>
+          <div class="tags">
+            <span class="tag">Soporte remoto</span>
+            <span class="tag">Buenas prácticas</span>
+          </div>
+        </article>
+
+        <article class="videoCard">
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/qKr2RIAk7mQ"
+              title="Contraseñas seguras"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <h3>Contraseñas seguras</h3>
+          <p>Reglas simples para proteger tu cuenta y evitar accesos indebidos.</p>
+          <div class="tags">
+            <span class="tag">Seguridad</span>
+            <span class="tag">Cuentas</span>
+          </div>
+        </article>
+
+        <article class="videoCard">
+          <div class="video">
+            <iframe
+              src="https://www.youtube.com/embed/UuuAlP7ay6U"
+              title="Evitar phishing"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <h3>Evita el phishing</h3>
+          <p>Cómo identificar correos sospechosos y qué hacer si hiciste clic.</p>
+          <div class="tags">
+            <span class="tag">Correo</span>
+            <span class="tag">Prevención</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout callout--center">
+        <div>
+          <h3>¿Tu caso requiere asistencia remota?</h3>
+          <p>Ten tu ticket abierto y comparte evidencias. La UTI validará el procedimiento.</p>
+        </div>
+        <a class="btn btn--primary"
+           href="https://app.inia.gob.pe/sistemas/publico"
+           target="_blank" rel="noopener">
+          Crear ticket
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <h2>Preguntas frecuentes</h2>
+        <p>Respuestas rápidas para evitar demoras.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>¿Qué debo poner en el ticket para que me atiendan rápido?</summary>
+          <p>Área/sede, descripción clara, desde cuándo ocurre, mensaje exacto, capturas y un teléfono/anexo para coordinación.</p>
+        </details>
+
+        <details>
+          <summary>¿Puedo solicitar instalación de cualquier software?</summary>
+          <p>Se atienden instalaciones autorizadas y justificadas. Para software especializado, se coordina con el área usuaria (evaluación técnica funcional).</p>
+        </details>
+
+        <details>
+          <summary>¿Cómo se asigna la prioridad?</summary>
+          <p>Por impacto y urgencia. Incidentes críticos (sistema caído, seguridad) se atienden primero.</p>
+        </details>
+
+        <details>
+          <summary>Recibí un correo sospechoso, ¿qué hago?</summary>
+          <p>No abras enlaces ni adjuntos. Reporta por Mesa de Ayuda adjuntando captura del correo y descripción de lo ocurrido.</p>
+        </details>
+      </div>
+
+      <div class="cta">
+        <h3>¿Listo para registrar tu solicitud?</h3>
+        <p>Usa la Mesa de Ayuda oficial para seguimiento y atención adecuada.</p>
+        <a class="btn btn--primary btn--xl"
+           href="https://app.inia.gob.pe/sistemas/publico"
+           target="_blank" rel="noopener">
+          Ir a Mesa de Ayuda
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <strong>UTI - INIA</strong>
+        <span>Unidad de Tecnologia de la Informacion</span>
+      </div>
+      <div class="footer__right">
+        <span class="muted">© <span id="year"></span> INIA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
