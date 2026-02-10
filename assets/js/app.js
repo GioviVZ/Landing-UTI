@@ -10,7 +10,7 @@ if (burger && mobile) {
     mobile.setAttribute("aria-hidden", String(isOpen));
   });
 
-  mobile.querySelectorAll("a").forEach(a => {
+  mobile.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       mobile.style.display = "none";
       burger.setAttribute("aria-expanded", "false");
@@ -20,14 +20,17 @@ if (burger && mobile) {
 }
 
 // Año footer
-document.getElementById("year").textContent = new Date().getFullYear();
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
 // Animación reveal (sutil, pro)
 const reveals = document.querySelectorAll(".reveal");
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
-  });
-}, { threshold: 0.15 });
+if (reveals.length) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("show");
+    });
+  }, { threshold: 0.15 });
 
-reveals.forEach(el => io.observe(el));
+  reveals.forEach((el) => io.observe(el));
+}

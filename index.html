@@ -11,7 +11,7 @@
 
   <meta name="description" content="UTI INIA — Servicios TI, Mesa de Ayuda, Guías y tutoriales para soporte y seguridad." />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
@@ -43,6 +43,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#tickets">Guía de tickets</a>
         <a href="#tutoriales">Tutoriales</a>
+        <a href="#registro">Registro</a>
         <a href="#faq">FAQ</a>
 
         <a class="btn btn--primary"
@@ -61,6 +62,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#tickets">Guía de tickets</a>
       <a href="#tutoriales">Tutoriales</a>
+      <a href="#registro">Registro</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn--primary w100"
          href="https://app.inia.gob.pe/sistemas/publico"
@@ -383,6 +385,91 @@
     </div>
   </section>
 
+  <!-- ✅ REGISTRO (NUEVO) -->
+  <section class="section section--alt" id="registro">
+    <div class="container">
+      <div class="section__head">
+        <h2>Registro de usuario — Mesa de Ayuda</h2>
+        <p>Si no cuentas con usuario, completa este formulario. La UTI creará tu acceso y recibirás tus credenciales en tu correo institucional.</p>
+      </div>
+
+      <form class="formCard" id="frmRegistro">
+        <!-- Honeypot anti-bot (no lo llenes) -->
+        <input type="text" name="website" id="website" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
+
+        <div class="grid2">
+          <div class="field">
+            <label for="nombres">Nombres</label>
+            <input id="nombres" name="nombres" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" name="apellidos" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="dni">DNI</label>
+            <input id="dni" name="dni" type="text" inputmode="numeric" maxlength="8" placeholder="8 dígitos" required />
+          </div>
+
+          <div class="field">
+            <label for="correo">Correo INIA</label>
+            <input id="correo" name="correo" type="email" placeholder="usuario@inia.gob.pe" required />
+            <small class="help">Solo se aceptan correos con dominio <strong>@inia.gob.pe</strong>.</small>
+          </div>
+
+          <div class="field">
+            <label for="sede">Sede</label>
+            <select id="sede" name="sede" required>
+              <option value="">Seleccione…</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="dependencia">Dependencia</label>
+            <select id="dependencia" name="dependencia" required disabled>
+              <option value="">Seleccione…</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="subdependencia">Subdependencia</label>
+            <select id="subdependencia" name="subdependencia" required disabled>
+              <option value="">Seleccione…</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="detalle">Detalle / Observación</label>
+            <input id="detalle" name="detalle" type="text" placeholder="Opcional: área, anexo, referencia…" />
+          </div>
+        </div>
+
+        <!-- ✅ reCAPTCHA v2 Checkbox -->
+        <div class="captchaWrap">
+          <div class="g-recaptcha" data-sitekey="6LdxUGYsAAAAAEGLBBPQiPknaeopltBVZlhdhlDS"></div>
+          <small class="help">Verificación para evitar envíos automatizados.</small>
+        </div>
+
+        <div class="formActions">
+          <button class="btn btn--primary btn--xl" type="submit">
+            Enviar solicitud de registro
+          </button>
+          <a class="btn btn--soft btn--xl" href="https://app.inia.gob.pe/sistemas/publico" target="_blank" rel="noopener">
+            Ya tengo usuario → Ir a Mesa de Ayuda
+          </a>
+        </div>
+
+        <div class="alert" id="msg" role="status" aria-live="polite"></div>
+
+        <p class="mutedNote">
+          Al enviar, aceptas que la UTI use estos datos para crear tu usuario. Tus credenciales serán enviadas al correo institucional indicado.
+        </p>
+      </form>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="section section--alt" id="faq">
     <div class="container">
@@ -438,6 +525,12 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- ✅ reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- ✅ Registro (combos + validación + envío) -->
+  <script src="assets/js/register.js"></script>
 </body>
 </html>
