@@ -1,11 +1,6 @@
 /* Google Font (tipografía externa) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
-/* =========================
-   UTI INIA — Styles (INIA Green System)
-   Inspirado en plataforma INIA (blanco + verde institucional)
-========================= */
-
 :root{
   /* Base (claro, institucional) */
   --bg0: #f6f8fb;
