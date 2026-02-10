@@ -1,7 +1,7 @@
 const ORG_URL = "assets/data/org_inia.json";
 
 // ✅ Pega aquí tu URL del Apps Script /exec
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby6VCOaxqzAXsO1Hjzrk1C-lCkry3EjVLwzkvgyplwS3MlT5zKdgABAV8af8B4ldO8tOQ/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx1234567890/exec";
 
 const $ = (id) => document.getElementById(id);
 
