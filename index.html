@@ -253,39 +253,137 @@
         <p>Un ticket bien hecho = solución más rápida.</p>
       </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step__n">1</div>
-          <h3>Ingresa al portal</h3>
-          <p>Accede al sistema público de Mesa de Ayuda UTI.</p>
-          <a class="link"
-             href="https://app.inia.gob.pe/sistemas/publico"
-             target="_blank" rel="noopener">
-            Ir al portal →
-          </a>
+      <div class="tflow is-inc" id="tflowTickets">
+        <div class="tflow__headTop">
+          <div>
+            <h3 class="tflow__title">Paso a paso (según el tipo)</h3>
+            <p class="tflow__sub">
+              Selecciona el tipo y verás el camino recomendado. La UTI deriva al área correcta.
+            </p>
+          </div>
+
+          <div class="tflow__tabs tflow__tabs--pills" role="tablist" aria-label="Tipo de ticket">
+            <button class="tflow__tab tflow__tab--inc is-active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    data-route="inc">
+              🟢 Incidencia <span class="tflow__tabSub">(algo falló)</span>
+            </button>
+
+            <button class="tflow__tab tflow__tab--req"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    data-route="req">
+              🔵 Requerimiento <span class="tflow__tabSub">(accesos / permisos)</span>
+            </button>
+          </div>
         </div>
 
-        <div class="step">
-          <div class="step__n">2</div>
-          <h3>Describe con precisión</h3>
-          <p>Qué ocurrió, desde cuándo, mensaje exacto y tu área/sede.</p>
-          <div class="hint">Ej: “No ingreso a SIGA — error 500 desde hoy 9:10am”</div>
-        </div>
+        <div class="tflow__gridSimple">
+          <!-- INC -->
+          <div class="tflow__card" data-route="inc">
+            <div class="stepsWrap">
+              <div class="stepCard">
+                <div class="stepN">1</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Ingresa al portal</div>
+                  <div class="stepText">Click en <b>“Registrar nuevo ticket”</b>.</div>
+                </div>
+              </div>
 
-        <div class="step">
-          <div class="step__n">3</div>
-          <h3>Adjunta evidencias</h3>
-          <p>Capturas, fotos, archivos o logs relevantes (si aplica).</p>
-          <div class="hint">Captura + nombre de equipo + usuario</div>
-        </div>
+              <div class="stepCard">
+                <div class="stepN">2</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Selecciona el tipo</div>
+                  <div class="stepText">Marca <b>Incidencia</b>.</div>
+                </div>
+              </div>
 
-        <div class="step">
-          <div class="step__n">4</div>
-          <h3>Prioridad correcta</h3>
-          <p>Selecciona impacto real. Casos críticos se atienden primero.</p>
-          <div class="hint">Crítico: sistema caído / incidente de seguridad</div>
+              <div class="stepCard">
+                <div class="stepN">3</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Subtipo</div>
+                  <div class="stepText"><b>Soporte técnico</b> (recomendado). UTI deriva: Sistemas/Infraestructura.</div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN">4</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Detalles</div>
+                  <div class="stepText">
+                    Indica <b>desde cuándo</b>, <b>error</b> y adjunta <b>captura</b>.
+                    Si es para otro: nombre + anexo/teléfono.
+                  </div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN">5</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Ubicación + archivo + Guardar</div>
+                  <div class="stepText">Selecciona ubicación, adjunta archivo (si aplica) y <b>Guardar</b>.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REQ -->
+          <div class="tflow__card" data-route="req">
+            <div class="stepsWrap">
+              <div class="stepCard">
+                <div class="stepN stepN--blue">1</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Ingresa al portal</div>
+                  <div class="stepText">Click en <b>“Registrar nuevo ticket”</b>.</div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN stepN--blue">2</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Selecciona el tipo</div>
+                  <div class="stepText">Marca <b>Requerimiento</b>.</div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN stepN--blue">3</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Subtipo</div>
+                  <div class="stepText"><b>Mantenimiento de Usuarios</b> (puede requerir aprobación).</div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN stepN--blue">4</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Especifica lo que necesitas</div>
+                  <div class="stepText">
+                    Solicitud: usuario de red / correo / SIGA / SIAF.  
+                    Detalles: <b>nombre</b>, <b>DNI</b>, <b>cargo</b>, <b>OS/Contrato</b>, teléfono/anexo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="stepCard">
+                <div class="stepN stepN--blue">5</div>
+                <div class="stepBody">
+                  <div class="stepTitle">Adjuntar sustento + Guardar</div>
+                  <div class="stepText">Adjunta sustento (si corresponde), ubicación y <b>Guardar</b>.</div>
+                </div>
+              </div>
+
+              <p class="tflow__note">* Algunos subtipos pueden requerir aprobación previa.</p>
+            </div>
+          </div>
         </div>
       </div>
+
+    </div>
+  </section>
 
       <div class="split">
         <div class="box good">

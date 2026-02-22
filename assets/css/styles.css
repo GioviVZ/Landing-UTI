@@ -17,13 +17,14 @@
   --shadow: 0 18px 50px rgba(2, 6, 23, 0.10);
   --shadow2: 0 10px 28px rgba(2, 6, 23, 0.08);
 
-  /* INIA Green (ajustado a tu captura) */
-  --inia: #1f7a4a;          /* verde principal (botón) */
-  --inia-2: #2aa065;        /* verde secundario */
+  /* INIA Green */
+  --inia: #1f7a4a;
+  --inia-2: #2aa065;
   --inia-soft: rgba(31,122,74,0.12);
 
   /* Azul apoyo (TI) */
   --ti: #1f5fa5;
+  --ti-2:#2f7dd1;
   --ti-soft: rgba(31,95,165,0.10);
 
   /* Estados */
@@ -57,7 +58,7 @@ a{color:inherit; text-decoration:none}
   border-radius: 12px;
 }
 
-/* ===== Background ambience (sutil, institucional) ===== */
+/* ===== Background ambience ===== */
 .bg{position:fixed; inset:0; z-index:-1; pointer-events:none; overflow:hidden}
 .blob{
   position:absolute;
@@ -102,6 +103,17 @@ a{color:inherit; text-decoration:none}
   border: 1px solid var(--border);
   box-shadow: var(--shadow2);
   overflow:hidden;
+  position:relative;
+}
+/* Punto decorativo opcional */
+.mark__dot{
+  position:absolute;
+  width:10px; height:10px;
+  border-radius:999px;
+  top:8px; left:8px;
+  background: var(--inia);
+  box-shadow: 0 0 0 6px rgba(31,122,74,.12);
+  opacity:.0; /* si quieres verlo, cambia a .9 */
 }
 /* Logo dentro del cuadrito */
 .brand__logo-img{
@@ -277,6 +289,7 @@ a{color:inherit; text-decoration:none}
   filter: blur(14px);
   pointer-events:none;
 }
+.panel > *{position:relative}
 
 .panel__top{display:flex; align-items:center; justify-content:space-between; gap: 10px; margin-bottom: 6px}
 .panel h3{margin:0; font-size: 18px}
@@ -394,41 +407,6 @@ a{color:inherit; text-decoration:none}
 .callout p{margin:0; color: rgba(15,23,42,.78); line-height:1.55}
 .callout--center{justify-content:center; text-align:center; flex-direction:column}
 
-/* Steps */
-.steps{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-.step{
-  background: rgba(255,255,255,.78);
-  border: 1px solid var(--border2);
-  border-radius: 22px;
-  padding: 16px;
-  box-shadow: var(--shadow2);
-}
-.step__n{
-  width: 34px; height: 34px;
-  display:grid; place-items:center;
-  border-radius: 14px;
-  font-weight: 900;
-  background: rgba(31,95,165,.08);
-  border: 1px solid rgba(31,95,165,.16);
-  color: rgba(31,95,165,.95);
-}
-.step h3{margin: 10px 0 6px}
-.step p{margin: 0 0 8px; color: var(--muted); line-height:1.55}
-.hint{
-  font-size: 12.5px;
-  color: rgba(15,23,42,.72);
-  background: rgba(15,23,42,.03);
-  border: 1px solid rgba(15,23,42,.08);
-  padding: 10px;
-  border-radius: 16px;
-}
-.link{color: var(--inia); font-weight: 900}
-.link:hover{text-decoration: underline}
-
 /* Split boxes */
 .split{
   display:grid;
@@ -447,6 +425,120 @@ a{color:inherit; text-decoration:none}
 .box ul{margin:0; padding-left: 16px; color: var(--muted); line-height:1.7}
 .box.good{border-color: rgba(22,163,74,.22); background: rgba(22,163,74,.06)}
 .box.warn{border-color: rgba(245,158,11,.24); background: rgba(245,158,11,.06)}
+
+/* ===== TFLOW (Guía tickets) ===== */
+.tflow{ margin-top: 10px; }
+
+.tflow__headTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tflow__title{ margin:0 0 8px; font-size: 22px; }
+.tflow__sub{ margin:0; color: var(--muted); line-height:1.55; max-width: 64ch; }
+
+/* Tabs pills */
+.tflow__tabs--pills{
+  width: 100%;
+  display:flex;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.tflow__tab{
+  appearance: none;
+  border: 1px solid rgba(15,23,42,.12);
+  background: rgba(255,255,255,.75);
+  cursor: pointer;
+  font-weight: 900;
+  padding: 14px 18px;
+  border-radius: 999px;
+  color: rgba(15,23,42,.82);
+  box-shadow: 0 10px 22px rgba(2,6,23,.06);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  flex: 1;
+  text-align: center;
+}
+.tflow__tab:hover{ transform: translateY(-1px); box-shadow: 0 14px 26px rgba(2,6,23,.10); }
+.tflow__tabSub{ font-weight: 800; opacity: .9; margin-left: 6px; }
+
+.tflow__tab--inc.is-active{
+  color:#fff;
+  border-color: rgba(31,122,74,.25);
+  background: linear-gradient(135deg, var(--inia), var(--inia-2));
+  box-shadow: 0 16px 34px rgba(31,122,74,.22);
+}
+.tflow__tab--req.is-active{
+  color:#fff;
+  border-color: rgba(31,95,165,.25);
+  background: linear-gradient(135deg, var(--ti), var(--ti-2));
+  box-shadow: 0 16px 34px rgba(31,95,165,.20);
+}
+
+.tflow__gridSimple{ margin-top: 12px; }
+
+/* Solo card activo */
+.tflow__card{ display:none; }
+.tflow.is-inc .tflow__card[data-route="inc"]{ display:block; }
+.tflow.is-req .tflow__card[data-route="req"]{ display:block; }
+
+.tflow__note{ margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+/* Steps */
+.stepsWrap{
+  background: rgba(255,255,255,.82);
+  border: 1px solid var(--border2);
+  border-radius: 22px;
+  box-shadow: var(--shadow2);
+  padding: 14px;
+}
+
+/* Card de paso */
+.stepCard{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+  padding: 14px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,.10);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 10px 20px rgba(2,6,23,.06);
+  margin: 12px 0;
+}
+
+.stepN{
+  width: 44px; height: 44px;
+  border-radius: 16px;
+  display:grid; place-items:center;
+  font-weight: 900;
+  background: rgba(31,122,74,.10);
+  border: 1px solid rgba(31,122,74,.22);
+  color: rgba(31,122,74,.98);
+  flex: 0 0 44px;
+  font-size: 18px;
+}
+.stepN--blue{
+  background: rgba(31,95,165,.10);
+  border-color: rgba(31,95,165,.22);
+  color: rgba(31,95,165,.98);
+}
+
+.stepTitle{
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.stepText{
+  color: rgba(15,23,42,.78);
+  font-size: 16.8px;
+  line-height: 1.55;
+}
 
 /* ===== Video cards ===== */
 .videoCard{
@@ -627,7 +719,7 @@ a{color:inherit; text-decoration:none}
   .stats{grid-template-columns: 1fr; gap: 10px}
   .strip{grid-template-columns: 1fr}
   .cards--4{grid-template-columns: 1fr 1fr}
-  .steps{grid-template-columns: 1fr 1fr}
+  .cards--3{grid-template-columns: 1fr}
   .split{grid-template-columns: 1fr}
 }
 
@@ -638,10 +730,12 @@ a{color:inherit; text-decoration:none}
 
 @media (max-width: 640px){
   .grid2{grid-template-columns: 1fr}
+  .tflow__tabs--pills{flex-direction:column}
+  .stepTitle{font-size:18px}
+  .stepText{font-size:16px}
 }
 
 @media (max-width: 560px){
   .cards--4{grid-template-columns: 1fr}
-  .steps{grid-template-columns: 1fr}
   .callout{flex-direction:column; align-items:flex-start}
 }
