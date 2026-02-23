@@ -276,7 +276,7 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* =========================
-   6) HERO (COMPLETO)
+   6) HERO
 ========================= */
 .hero{
   padding: 34px 0 18px;
@@ -328,7 +328,7 @@ a{ color:inherit; text-decoration:none; }
   margin-top: 2px;
 }
 
-/* Grid con panel integrado (quita “huecos” y ordena todo) */
+/* Grid con panel integrado  */
 .hero__grid{
   display:grid;
   grid-template-columns: 1.25fr 1fr;
@@ -375,10 +375,9 @@ a{ color:inherit; text-decoration:none; }
   width:100%;
   height:100%;
   display:block;
-  object-fit: cover; /* si tu imagen se ve rara, cambia a contain */
-}
+  object-fit: cover; 
 
-/* MiniGrid (compacto y bonito) */
+/* MiniGrid */
 .miniGrid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
