@@ -48,8 +48,12 @@
         <a href="#servicios">Servicios</a>
         <a href="#tickets">Guía de tickets</a>
         <a href="#tutoriales">Tutoriales</a>
-        <a href="#registro">Registro</a>
+        <a href="#sugerencias">Sugerencias</a>
         <a href="#faq">FAQ</a>
+
+        <button class="btn btn--soft" id="openRegistroTop" type="button">
+          Solicitar registro
+        </button>
 
         <a class="btn btn--primary"
            href="https://app.inia.gob.pe/sistemas/publico"
@@ -67,8 +71,12 @@
       <a href="#servicios">Servicios</a>
       <a href="#tickets">Guía de tickets</a>
       <a href="#tutoriales">Tutoriales</a>
-      <a href="#registro">Registro</a>
+      <a href="#sugerencias">Sugerencias</a>
       <a href="#faq">FAQ</a>
+
+      <button class="btn btn--soft w100" id="openRegistroMobile" type="button">
+        Solicitar registro
+      </button>
 
       <a class="btn btn--primary w100"
          href="https://app.inia.gob.pe/sistemas/publico"
@@ -79,255 +87,262 @@
   </header>
 
   <!-- HERO -->
-<section class="hero">
-  <div class="container hero__grid">
-    <!-- LEFT -->
-    <div class="hero__left">
-      <div class="pill">
-        <span class="pill__dot"></span>
-        <span>Canal oficial de soporte • Atención con trazabilidad</span>
-      </div>
+  <section class="hero">
+    <div class="container hero__grid">
+      <!-- LEFT -->
+      <div class="hero__left">
+        <div class="pill">
+          <span class="pill__dot"></span>
+          <span>Canal oficial de soporte • Atención con trazabilidad</span>
+        </div>
 
-      <h1>
-        Mesa de Ayuda UTI:
-        <span class="grad">rápida, ordenada y segura</span>
-      </h1>
+        <h1>
+          Mesa de Ayuda UTI:
+          <span class="grad">rápida, ordenada y segura</span>
+        </h1>
 
-      <p class="lead">
-        Registra tus incidencias y solicitudes TI con seguimiento. Encuentra guías,
-        videos y recomendaciones de seguridad para evitar riesgos y reducir tiempos.
-      </p>
+        <p class="lead">
+          Registra tus incidencias y solicitudes TI con seguimiento. Encuentra guías,
+          videos y recomendaciones de seguridad para evitar riesgos y reducir tiempos.
+        </p>
 
-      <!-- NUEVO: Mensaje institucional (para llenar huecos con valor) -->
-      <div class="heroMission">
-        <div class="heroMission__badge" aria-hidden="true">🌾</div>
-        <div class="heroMission__body">
-          <h3>INIA: compromiso con el agricultor y ganadero</h3>
-          <p>
-            Somos una institución que creció gracias al empeño y conocimiento de ustedes,
-            en favor del agricultor y ganadero. Por ello tenemos mayor alcance a nivel nacional
-            y buscamos brindar apoyo a todas las Estaciones Experimentales Agrarias y Sede Central. Este sistema nos permite ordenar, priorizar y dar
-            seguimiento a cada solicitud con transparencia.
-          </p>
+        <div class="heroMission">
+          <div class="heroMission__badge" aria-hidden="true">🌾</div>
+          <div class="heroMission__body">
+            <h3>INIA: compromiso con el agricultor y ganadero</h3>
+            <p>
+              Somos una institución que creció gracias al empeño y conocimiento de ustedes,
+              en favor del agricultor y ganadero. Por ello tenemos mayor alcance a nivel nacional
+              y buscamos brindar apoyo a todas las Estaciones Experimentales Agrarias y Sede Central.
+              Este sistema nos permite ordenar, priorizar y dar seguimiento a cada solicitud con transparencia.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--xl"
+             href="https://app.inia.gob.pe/sistemas/publico"
+             target="_blank" rel="noopener">
+            Crear / Ver mis tickets
+          </a>
+
+          <a class="btn btn--soft btn--xl" href="#tickets">Ver guía rápida</a>
+
+          <button class="btn btn--soft btn--xl" id="openRegistroHero" type="button">
+            Solicitar usuario
+          </button>
+        </div>
+
+        <p class="lead">¿Qué hace INIA?</p>
+
+        <div class="miniGrid">
+          <div class="miniCard">
+            🇵🇪 <b>Presencia nacional</b>
+            <span class="miniSub">INIA brinda servicios y soporte técnico en todo el país</span>
+          </div>
+
+          <div class="miniCard">
+            🌱 <b>Investigación científica</b>
+            <span class="miniSub">INIA realiza labores de desarrollo en cultivos, semillas, plantones y recursos genéticos</span>
+          </div>
+
+          <div class="miniCard">
+            🧬 <b>Innovación tecnológica</b>
+            <span class="miniSub">INIA realiza investigación y desarrollo tecnológico que sostienen la innovación agraria</span>
+          </div>
+        </div>
+
+        <p class="lead">Tips</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">✅</div>
+            <div>
+              <strong>Ticket claro</strong>
+              <span>Mejor atención</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">📎</div>
+            <div>
+              <strong>Evidencias</strong>
+              <span>Capturas / fotos</span>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat__icon" aria-hidden="true">🛡️</div>
+            <div>
+              <strong>Seguridad</strong>
+              <span>Buenas prácticas</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hero__actions">
-        <a class="btn btn--primary btn--xl"
-           href="https://app.inia.gob.pe/sistemas/publico"
-           target="_blank" rel="noopener">
-          Crear / Ver mis tickets
-        </a>
-        <a class="btn btn--soft btn--xl" href="#tickets">Ver guía rápida</a>
-      </div>
+      <!-- IMAGE -->
+      <aside class="hero_image">
+        <div class="heroImageSmall reveal">
+          <img src="assets/img/image.png" alt="Soporte Técnico UTI INIA">
+        </div>
 
-      <!-- Microcards -->
-      <P class="lead"> ¿Que Hace INIA?</P>
-      <div class="miniGrid">
-        
-      <div class="miniCard">
-        🇵🇪 <b>Presencia nacional</b>
-        <span class="miniSub">INIA brinda servicios y soporte técnico en todo el país</span>
-      </div>
+        <div class="heroValueBar">
+          <div class="heroValueItem">
+            <span class="heroValueIco" aria-hidden="true">📍</span>
+            <div>
+              <b>Cobertura nacional</b>
+              <small>Atendemos sedes y EEAs</small>
+            </div>
+          </div>
+          <div class="heroValueItem">
+            <span class="heroValueIco" aria-hidden="true">🔎</span>
+            <div>
+              <b>Seguimiento</b>
+              <small>Estado y trazabilidad</small>
+            </div>
+          </div>
+          <div class="heroValueItem">
+            <span class="heroValueIco" aria-hidden="true">⚙️</span>
+            <div>
+              <b>Derivación</b>
+              <small>UTI canaliza al área</small>
+            </div>
+          </div>
+        </div>
+      </aside>
 
-      <div class="miniCard">
-        🌱 <b>Investigación científica</b>
-        <span class="miniSub">INIA realiza labores en Desarrollo en cultivos, semillas, plantones y recursos genéticos</span>
-      </div>
+      <!-- RIGHT MID: ASSIST -->
+      <aside class="hero__right">
+        <div class="heroAssist reveal">
+          <div class="heroAssist__top">
+            <h3>Atención Mesa de Ayuda</h3>
+            <span class="chipMini">UTI</span>
+          </div>
 
-      <div class="miniCard">
-        🧬 <b>Innovación tecnológica</b>
-        <span class="miniSub">INIA realiza Investigacion y desarrollo tecnologico que sostienen la Innovacion Agraria</span>
-      </div>
+          <div class="heroAssist__items">
+            <div class="assistItem">
+              <span class="assistIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="ico">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v6l4 2"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Horario</strong>
+                <span>Lunes a Viernes • 08:00 am – 05:00 pm</span>
+              </div>
+            </div>
 
+            <div class="assistItem">
+              <span class="assistIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="ico">
+                  <rect x="4" y="6" width="16" height="10" rx="2"></rect>
+                  <path d="M2 18h20"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Desde tu computadora</strong>
+                <span>Registra y da seguimiento a tus tickets</span>
+              </div>
+            </div>
+
+            <div class="assistItem">
+              <span class="assistIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="ico">
+                  <rect x="8" y="3" width="8" height="18" rx="2"></rect>
+                  <path d="M11 18h2"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Desde tu teléfono</strong>
+                <span>Accede al portal sin instalar apps</span>
+              </div>
+            </div>
+
+            <div class="assistItem highlight">
+              <span class="assistIcon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="ico">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Canal oficial recomendado</strong>
+                <span>Solo solicitudes vía Mesa de Ayuda</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="heroAssist__note">
+            Un ticket claro y con evidencia acelera tu atención.
+          </div>
+
+          <div class="heroAssist__hint">
+            <b>Incluye siempre:</b> sede/área • desde cuándo • mensaje exacto • evidencia • contacto/anexo
+          </div>
+        </div>
+      </aside>
+
+      <!-- PANEL -->
+      <aside class="hero__panel">
+        <div class="panel_reveal">
+          <div class="panel__top">
+            <h3>¿Qué puedes solicitar aquí?</h3>
+            <span class="chip">UTI</span>
+          </div>
+
+          <ul class="checklist">
+            <li><span>✔</span> Accesos a sistemas / usuarios</li>
+            <li><span>✔</span> Soporte a equipo (PC, laptop, impresoras)</li>
+            <li><span>✔</span> Conectividad (Wi-Fi, LAN, salas)</li>
+            <li><span>✔</span> Antivirus / incidentes de seguridad</li>
+            <li><span>✔</span> Videoconferencia / periféricos</li>
+          </ul>
+
+          <div class="tip">
+            <strong>Tip:</strong> Indica <em>qué pasó</em>, <em>desde cuándo</em>, <em>mensaje de error</em>
+            y tu <em>área/sede</em>.
+          </div>
+
+          <div class="formActions">
+            <a class="btn btn--primary"
+               href="https://app.inia.gob.pe/sistemas/publico"
+               target="_blank" rel="noopener">
+              Ir a Mesa de Ayuda
+            </a>
+
+            <button class="btn btn--soft" id="openRegistroPanel" type="button">
+              Solicitar registro
+            </button>
+          </div>
+
+          <div class="micro">
+            <span class="dot ok"></span>
+            <span>Recomendado: usar el canal oficial para atención y control.</span>
+          </div>
+        </div>
+      </aside>
     </div>
-<P class="lead">  Tips </P>
-      <!-- Stats -->
-      <div class="stats">
-        <div class="stat">
-          <div class="stat__icon" aria-hidden="true">✅</div>
-          <div>
-            <strong>Ticket claro</strong>
-            <span>Mejor atención</span>
-          </div>
-        </div>
 
-        <div class="stat">
-          <div class="stat__icon" aria-hidden="true">📎</div>
-          <div>
-            <strong>Evidencias</strong>
-            <span>Capturas / fotos</span>
-          </div>
+    <div class="container hero__strip">
+      <div class="strip">
+        <div class="strip__item">
+          <span class="badge">📌</span>
+          <span><strong>Objetivo:</strong> reducir tiempos y ordenar solicitudes TI.</span>
         </div>
-
-        <div class="stat">
-          <div class="stat__icon" aria-hidden="true">🛡️</div>
-          <div>
-            <strong>Seguridad</strong>
-            <span>Buenas prácticas</span>
-          </div>
+        <div class="strip__item">
+          <span class="badge">🧠</span>
+          <span><strong>Buenas prácticas:</strong> protege tu cuenta y tu información.</span>
+        </div>
+        <div class="strip__item">
+          <span class="badge">⚡</span>
+          <span><strong>Prioridad:</strong> incidencias críticas se atienden primero.</span>
         </div>
       </div>
     </div>
-
-    <!-- IMAGE -->
-    <aside class="hero_image">
-      <div class="heroImageSmall reveal">
-        <img src="assets/img/image.png" alt="Soporte Técnico UTI INIA">
-      </div>
-
-      <div class="heroValueBar">
-        <div class="heroValueItem">
-          <span class="heroValueIco" aria-hidden="true">📍</span>
-          <div>
-            <b>Cobertura nacional</b>
-            <small>Atendemos sedes y EEAs</small>
-          </div>
-        </div>
-        <div class="heroValueItem">
-          <span class="heroValueIco" aria-hidden="true">🔎</span>
-          <div>
-            <b>Seguimiento</b>
-            <small>Estado y trazabilidad</small>
-          </div>
-        </div>
-        <div class="heroValueItem">
-          <span class="heroValueIco" aria-hidden="true">⚙️</span>
-          <div>
-            <b>Derivación</b>
-            <small>UTI canaliza al área</small>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- RIGHT MID: ASSIST -->
-    <aside class="hero__right">
-      <div class="heroAssist reveal">
-        <div class="heroAssist__top">
-          <h3>Atención Mesa de Ayuda</h3>
-          <span class="chipMini">UTI</span>
-        </div>
-
-        <div class="heroAssist__items">
-          <div class="assistItem">
-            <span class="assistIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="ico">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 7v6l4 2"></path>
-              </svg>
-            </span>
-            <div>
-              <strong>Horario</strong>
-              <span>Lunes a Viernes • 08:00 am – 05:00 pm</span>
-            </div>
-          </div>
-
-          <div class="assistItem">
-            <span class="assistIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="ico">
-                <rect x="4" y="6" width="16" height="10" rx="2"></rect>
-                <path d="M2 18h20"></path>
-              </svg>
-            </span>
-            <div>
-              <strong>Desde tu computadora</strong>
-              <span>Registra y da seguimiento a tus tickets</span>
-            </div>
-          </div>
-
-          <div class="assistItem">
-            <span class="assistIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="ico">
-                <rect x="8" y="3" width="8" height="18" rx="2"></rect>
-                <path d="M11 18h2"></path>
-              </svg>
-            </span>
-            <div>
-              <strong>Desde tu teléfono</strong>
-              <span>Accede al portal sin instalar apps</span>
-            </div>
-          </div>
-
-          <div class="assistItem highlight">
-            <span class="assistIcon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="ico">
-                <circle cx="12" cy="12" r="8"></circle>
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"></path>
-              </svg>
-            </span>
-            <div>
-              <strong>Canal oficial recomendado</strong>
-              <span>Solo solicitudes vía Mesa de Ayuda</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="heroAssist__note">
-          Un ticket claro y con evidencia acelera tu atención.
-        </div>
-
-        <!-- mini recordatorio -->
-        <div class="heroAssist__hint">
-          <b>Incluye siempre:</b> sede/área • desde cuándo • mensaje exacto • evidencia • contacto/anexo
-        </div>
-      </div>
-    </aside>
-
-    <!-- LEFT BOTTOM: PANEL (misma card, pero dentro del grid para que no “flote”) -->
-    <aside class="hero__panel">
-      <div class="panel_reveal">
-        <div class="panel__top">
-          <h3>¿Qué puedes solicitar aquí?</h3>
-          <span class="chip">UTI</span>
-        </div>
-
-        <ul class="checklist">
-          <li><span>✔</span> Accesos a sistemas / usuarios</li>
-          <li><span>✔</span> Soporte a equipo (PC, laptop, impresoras)</li>
-          <li><span>✔</span> Conectividad (Wi-Fi, LAN, salas)</li>
-          <li><span>✔</span> Antivirus / incidentes de seguridad</li>
-          <li><span>✔</span> Videoconferencia / periféricos</li>
-        </ul>
-
-        <div class="tip">
-          <strong>Tip:</strong> Indica <em>qué pasó</em>, <em>desde cuándo</em>, <em>mensaje de error</em>
-          y tu <em>área/sede</em>.
-        </div>
-
-        <a class="btn btn--primary w100"
-           href="https://app.inia.gob.pe/sistemas/publico"
-           target="_blank" rel="noopener">
-          Ir a Mesa de Ayuda
-        </a>
-
-        <div class="micro">
-          <span class="dot ok"></span>
-          <span>Recomendado: usar el canal oficial para atención y control.</span>
-        </div>
-      </div>
-    </aside>
-  </div>
-
-  <!-- STRIP (se mantiene igual, pero lo dejo intacto) -->
-  <div class="container hero__strip">
-    <div class="strip">
-      <div class="strip__item">
-        <span class="badge">📌</span>
-        <span><strong>Objetivo:</strong> reducir tiempos y ordenar solicitudes TI.</span>
-      </div>
-      <div class="strip__item">
-        <span class="badge">🧠</span>
-        <span><strong>Buenas prácticas:</strong> protege tu cuenta y tu información.</span>
-      </div>
-      <div class="strip__item">
-        <span class="badge">⚡</span>
-        <span><strong>Prioridad:</strong> incidencias críticas se atienden primero.</span>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICIOS -->
   <section class="section" id="servicios">
@@ -434,7 +449,6 @@
         </div>
 
         <div class="tflow__gridSimple">
-          <!-- INC -->
           <div class="tflow__card" data-route="inc">
             <div class="stepsWrap">
               <div class="stepCard">
@@ -482,7 +496,6 @@
             </div>
           </div>
 
-          <!-- REQ -->
           <div class="tflow__card" data-route="req">
             <div class="stepsWrap">
               <div class="stepCard">
@@ -534,7 +547,6 @@
         </div>
       </div>
 
-      <!-- Split -->
       <div class="split">
         <div class="box good">
           <h3>✅ Envía un ticket</h3>
@@ -556,7 +568,6 @@
           </ul>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -635,16 +646,136 @@
     </div>
   </section>
 
-  <!-- REGISTRO -->
-  <section class="section section--alt" id="registro">
+  <!-- SUGERENCIAS / COMENTARIOS -->
+  <section class="section section--alt" id="sugerencias">
     <div class="container">
       <div class="section__head">
-        <h2>Registro de usuario — Mesa de Ayuda</h2>
-        <p>Si no cuentas con usuario, completa este formulario. La UTI creará tu acceso y recibirás tus credenciales en tu correo institucional.</p>
+        <h2>Comentarios y sugerencias</h2>
+        <p>Déjanos tu opinión para mejorar la atención, los tutoriales y la experiencia de la Mesa de Ayuda.</p>
       </div>
 
-      <form class="formCard" id="frmRegistro">
-        <!-- Honeypot anti-bot -->
+      <div class="suggestGrid">
+        <form class="formCard" id="frmSugerencia">
+          <div class="grid2">
+            <div class="field">
+              <label for="sugNombre">Nombre</label>
+              <input id="sugNombre" name="sugNombre" type="text" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="field">
+              <label for="sugArea">Área / Sede</label>
+              <input id="sugArea" name="sugArea" type="text" placeholder="Ej. UTI / Sede Central" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="sugTipo">Tipo</label>
+            <select id="sugTipo" name="sugTipo" required>
+              <option value="">Seleccione…</option>
+              <option value="Comentario">Comentario</option>
+              <option value="Sugerencia">Sugerencia</option>
+              <option value="Felicitación">Felicitación</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="sugMensaje">Mensaje</label>
+            <textarea id="sugMensaje" name="sugMensaje" placeholder="Escribe tu comentario o sugerencia..." required></textarea>
+          </div>
+
+          <div class="formActions">
+            <button class="btn btn--primary btn--xl" type="submit">
+              Publicar comentario
+            </button>
+          </div>
+
+          <div class="alert" id="msgSugerencia" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="commentsPanel">
+          <div class="commentsPanel__top">
+            <h3>Lo que nos comparten</h3>
+            <span class="chip">Comunidad INIA</span>
+          </div>
+
+          <div class="commentsList" id="commentsList">
+            <div class="emptyComments" id="emptyComments">
+              Aún no hay comentarios publicados. Sé el primero en dejar una sugerencia.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="clearComments" class="btn btn--soft">
+     Limpiar comentarios
+    </button>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <h2>Preguntas frecuentes</h2>
+        <p>Respuestas rápidas para evitar demoras.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>¿Qué debo poner en el ticket para que me atiendan rápido?</summary>
+          <p>Área/sede, descripción clara, desde cuándo ocurre, mensaje exacto, capturas y un teléfono/anexo para coordinación.</p>
+        </details>
+
+        <details>
+          <summary>¿Puedo solicitar instalación de cualquier software?</summary>
+          <p>Se atienden instalaciones autorizadas y justificadas. Para software especializado, se coordina con el área usuaria (evaluación técnica funcional).</p>
+        </details>
+
+        <details>
+          <summary>¿Cómo se asigna la prioridad?</summary>
+          <p>Por impacto y urgencia. Incidentes críticos (sistema caído, seguridad) se atienden primero.</p>
+        </details>
+
+        <details>
+          <summary>Recibí un correo sospechoso, ¿qué hago?</summary>
+          <p>No abras enlaces ni adjuntos. Reporta por Mesa de Ayuda adjuntando captura del correo y descripción de lo ocurrido.</p>
+        </details>
+      </div>
+
+      <div class="cta">
+        <h3>¿Listo para registrar tu solicitud?</h3>
+        <p>Usa la Mesa de Ayuda oficial para seguimiento y atención adecuada.</p>
+        <div class="formActions" style="justify-content:center;">
+          <a class="btn btn--primary btn--xl"
+             href="https://app.inia.gob.pe/sistemas/publico"
+             target="_blank" rel="noopener">
+            Ir a Mesa de Ayuda
+          </a>
+
+          <button class="btn btn--soft btn--xl" id="openRegistroFaq" type="button">
+            Solicitar registro
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL REGISTRO -->
+  <div class="modal" id="registroModal" aria-hidden="true">
+    <div class="modal__overlay" id="closeRegistroOverlay"></div>
+
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="registroModalTitle">
+      <button class="modal__close" id="closeRegistroModal" type="button" aria-label="Cerrar modal">
+        ×
+      </button>
+
+      <div class="modal__head">
+        <h2 id="registroModalTitle">Registro de usuario — Mesa de Ayuda</h2>
+        <p>
+          Si no cuentas con usuario, completa este formulario. La UTI creará tu acceso y recibirás tus credenciales en tu correo institucional.
+        </p>
+      </div>
+
+      <form class="formCard formCard--modal" id="frmRegistro">
         <input type="text" name="website" id="website" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
 
         <div class="grid2">
@@ -719,49 +850,7 @@
         </p>
       </form>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section--alt" id="faq">
-    <div class="container">
-      <div class="section__head">
-        <h2>Preguntas frecuentes</h2>
-        <p>Respuestas rápidas para evitar demoras.</p>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>¿Qué debo poner en el ticket para que me atiendan rápido?</summary>
-          <p>Área/sede, descripción clara, desde cuándo ocurre, mensaje exacto, capturas y un teléfono/anexo para coordinación.</p>
-        </details>
-
-        <details>
-          <summary>¿Puedo solicitar instalación de cualquier software?</summary>
-          <p>Se atienden instalaciones autorizadas y justificadas. Para software especializado, se coordina con el área usuaria (evaluación técnica funcional).</p>
-        </details>
-
-        <details>
-          <summary>¿Cómo se asigna la prioridad?</summary>
-          <p>Por impacto y urgencia. Incidentes críticos (sistema caído, seguridad) se atienden primero.</p>
-        </details>
-
-        <details>
-          <summary>Recibí un correo sospechoso, ¿qué hago?</summary>
-          <p>No abras enlaces ni adjuntos. Reporta por Mesa de Ayuda adjuntando captura del correo y descripción de lo ocurrido.</p>
-        </details>
-      </div>
-
-      <div class="cta">
-        <h3>¿Listo para registrar tu solicitud?</h3>
-        <p>Usa la Mesa de Ayuda oficial para seguimiento y atención adecuada.</p>
-        <a class="btn btn--primary btn--xl"
-           href="https://app.inia.gob.pe/sistemas/publico"
-           target="_blank" rel="noopener">
-          Ir a Mesa de Ayuda
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

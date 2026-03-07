@@ -1,6 +1,6 @@
 const ORG_URL = "assets/data/org_inia.json";
 
-// ✅ Pega aquí tu URL del Apps Script /exec
+
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby6VCOaxqzAXsO1Hjzrk1C-lCkry3EjVLwzkvgyplwS3MlT5zKdgABAV8af8B4ldO8tOQ/exec";
 
 const $ = (id) => document.getElementById(id);
@@ -150,3 +150,14 @@ if (frm) {
 
 // Init
 loadOrg().catch(() => setMsg("error", "No se pudo cargar la organización (org_inia.json)."));
+
+const clearBtn = document.getElementById("clearComments");
+
+if (clearBtn) {
+  clearBtn.addEventListener("click", () => {
+    if (confirm("¿Eliminar todos los comentarios?")) {
+      localStorage.removeItem("inia_sugerencias");
+      location.reload();
+    }
+  });
+}
