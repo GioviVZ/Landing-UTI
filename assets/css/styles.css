@@ -1191,6 +1191,12 @@ SUGERENCIAS / COMENTARIOS
   font-size: 20px;
 }
 
+.commentsPanel__actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom: 12px;
+}
+
 .commentsList{
   display:grid;
   gap: 12px;
@@ -1271,6 +1277,26 @@ SUGERENCIAS / COMENTARIOS
   line-height: 1.6;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.btn--sm{
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#clearComments{
+  background: rgba(15,23,42,.04);
+  border: 1px solid rgba(15,23,42,.10);
+  color: rgba(15,23,42,.72);
+  transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+#clearComments:hover{
+  background: rgba(239,68,68,.10);
+  border-color: rgba(239,68,68,.20);
+  color: #991b1b;
 }
 
 /* =========================

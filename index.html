@@ -647,69 +647,72 @@
   </section>
 
   <!-- SUGERENCIAS / COMENTARIOS -->
-  <section class="section section--alt" id="sugerencias">
-    <div class="container">
-      <div class="section__head">
-        <h2>Comentarios y sugerencias</h2>
-        <p>Déjanos tu opinión para mejorar la atención, los tutoriales y la experiencia de la Mesa de Ayuda.</p>
-      </div>
+<section class="section section--alt" id="sugerencias">
+  <div class="container">
+    <div class="section__head">
+      <h2>Comentarios y sugerencias</h2>
+      <p>Déjanos tu opinión para mejorar la atención, los tutoriales y la experiencia de la Mesa de Ayuda.</p>
+    </div>
 
-      <div class="suggestGrid">
-        <form class="formCard" id="frmSugerencia">
-          <div class="grid2">
-            <div class="field">
-              <label for="sugNombre">Nombre</label>
-              <input id="sugNombre" name="sugNombre" type="text" placeholder="Tu nombre" required />
-            </div>
-
-            <div class="field">
-              <label for="sugArea">Área / Sede</label>
-              <input id="sugArea" name="sugArea" type="text" placeholder="Ej. UTI / Sede Central" />
-            </div>
+    <div class="suggestGrid">
+      <form class="formCard" id="frmSugerencia">
+        <div class="grid2">
+          <div class="field">
+            <label for="sugNombre">Nombre</label>
+            <input id="sugNombre" name="sugNombre" type="text" placeholder="Tu nombre" required />
           </div>
 
           <div class="field">
-            <label for="sugTipo">Tipo</label>
-            <select id="sugTipo" name="sugTipo" required>
-              <option value="">Seleccione…</option>
-              <option value="Comentario">Comentario</option>
-              <option value="Sugerencia">Sugerencia</option>
-              <option value="Felicitación">Felicitación</option>
-            </select>
+            <label for="sugArea">Área / Sede</label>
+            <input id="sugArea" name="sugArea" type="text" placeholder="Ej. UTI / Sede Central" />
           </div>
+        </div>
 
-          <div class="field">
-            <label for="sugMensaje">Mensaje</label>
-            <textarea id="sugMensaje" name="sugMensaje" placeholder="Escribe tu comentario o sugerencia..." required></textarea>
-          </div>
+        <div class="field">
+          <label for="sugTipo">Tipo</label>
+          <select id="sugTipo" name="sugTipo" required>
+            <option value="">Seleccione…</option>
+            <option value="Comentario">Comentario</option>
+            <option value="Sugerencia">Sugerencia</option>
+            <option value="Felicitación">Felicitación</option>
+          </select>
+        </div>
 
-          <div class="formActions">
-            <button class="btn btn--primary btn--xl" type="submit">
-              Publicar comentario
-            </button>
-          </div>
+        <div class="field">
+          <label for="sugMensaje">Mensaje</label>
+          <textarea id="sugMensaje" name="sugMensaje" placeholder="Escribe tu comentario o sugerencia..." required></textarea>
+        </div>
 
-          <div class="alert" id="msgSugerencia" role="status" aria-live="polite"></div>
-        </form>
+        <div class="formActions">
+          <button class="btn btn--primary btn--xl" type="submit">
+            Publicar comentario
+          </button>
+        </div>
 
-        <div class="commentsPanel">
-          <div class="commentsPanel__top">
-            <h3>Lo que nos comparten</h3>
-            <span class="chip">Comunidad INIA</span>
-          </div>
+        <div class="alert" id="msgSugerencia" role="status" aria-live="polite"></div>
+      </form>
 
-          <div class="commentsList" id="commentsList">
-            <div class="emptyComments" id="emptyComments">
-              Aún no hay comentarios publicados. Sé el primero en dejar una sugerencia.
-            </div>
+      <div class="commentsPanel">
+        <div class="commentsPanel__top">
+          <h3>Lo que nos comparten</h3>
+          <span class="chip">Comunidad INIA</span>
+        </div>
+
+        <div class="commentsPanel__actions">
+          <button id="clearComments" class="btn btn--soft btn--sm" type="button">
+            Limpiar comentarios
+          </button>
+        </div>
+
+        <div class="commentsList" id="commentsList">
+          <div class="emptyComments" id="emptyComments">
+            Aún no hay comentarios publicados. Sé el primero en dejar una sugerencia.
           </div>
         </div>
       </div>
     </div>
-    <button id="clearComments" class="btn btn--soft">
-     Limpiar comentarios
-    </button>
-  </section>
+  </div>
+</section>
 
   <!-- FAQ -->
   <section class="section section--alt" id="faq">
